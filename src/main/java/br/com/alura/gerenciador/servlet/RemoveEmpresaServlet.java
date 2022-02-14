@@ -1,6 +1,7 @@
 package br.com.alura.gerenciador.servlet;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,6 +22,8 @@ public class RemoveEmpresaServlet extends HttpServlet {
 		
 		Banco banco = new Banco();
 		banco.removeEmpresa(id);
+		
+		response.sendRedirect("listaEmpresas");
 	}
 
 }
