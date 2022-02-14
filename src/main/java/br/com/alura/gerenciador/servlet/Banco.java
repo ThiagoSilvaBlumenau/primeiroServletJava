@@ -28,4 +28,13 @@ public class Banco {
 		return Banco.lista;
 	}
 
+	public void removeEmpresa(Integer id) {
+		for (Empresa empresa : lista) {
+			if(empresa.getId() == id)  {
+				lista.remove(empresa);
+			}
+		}
+		
+	}
+
 }
